@@ -2,20 +2,19 @@
   <div class="container-fluid">
     {% for post in site.posts %}
       <div class="posts">
-        <div class="post-thumbnail">
-          <div class="post-thumbnail-image" style="background-image: url(/assets/img/{{ post.image }})"></div>
-        </div>
-        <div class="content-news">
-          <a href="{{post.url | prepend: site.baseurl}}">
-          <h2 class="post-link">{{ post.title }}</h2>
-          <p>{{ post.lead }}</p>
-          <div class="post__meta">
-            <span class="post__author">{{ post.author }}</span>
-            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+          <div class="post-thumbnail">
+            <div class="post-thumbnail-image" style="background-image: url(/assets/img/{{ post.image }})"></div>
           </div>
-          </a>
-        </div>
-
+          <div class="content-news">
+            <a href="{{post.url | prepend: site.baseurl}}">
+            <h2 class="post-link">{{ post.title }}</h2>
+            <p>{{ post.lead }}</p>
+            <div class="post__meta">
+              <span class="post__author">{{ post.author }}</span>
+              <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+            </div>
+            </a>
+          </div>
       </div>
     {% endfor %}
   </div>
